@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+            android:key="pref_cat_lockscreen_background"
+            android:title="@string/pref_cat_lockscreen_background_title">
+
+        <ListPreference
+                android:key="pref_lockscreen_background"
+                android:title="@string/pref_lockscreen_background_title"
+                android:entries="@array/lockscreen_bg_entries"
+                android:entryValues="@array/lockscreen_bg_values"
+                android:defaultValue="default"
+                android:order="1" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+                android:key="pref_lockscreen_bg_color"
+                android:title="@string/pref_lockscreen_bg_color_title"
+                android:summary="@string/pref_lockscreen_bg_color_summary"
+                android:defaultValue="@integer/COLOR_BLACK"
+                android:order="2" />
+
+        <Preference
+                android:key="pref_lockscreen_bg_image"
+                android:title="@string/pref_lockscreen_bg_image_title"
+                android:summary="@string/pref_lockscreen_bg_image_summary"
+                android:order="3" />
+
+        <CheckBoxPreference
+                android:key="pref_lockscreen_bg_image_blur"
+                android:title="@string/pref_lockscreen_bg_image_blur"
+                android:summaryOff="@string/pref_lockscreen_bg_image_blur_summary_off"
+                android:summaryOn="@string/pref_lockscreen_bg_image_blur_summary_on"
+                android:order="4" />
+
+        <ListPreference
+                android:key="pref_lockscreen_bg_see_through_tint"
+                android:title="@string/pref_lockscreen_bg_see_through_tint_title"
+                android:entries="@array/lockscreen_bg_see_through_tint_entries"
+                android:entryValues="@array/lockscreen_bg_see_through_tint_values"
+                android:defaultValue="dark"
+                android:order="5" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

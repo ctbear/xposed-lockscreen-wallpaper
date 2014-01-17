@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="empty_array" />
+
+    <string-array name="lockscreen_bg_entries" translatable="false">
+        <item>@string/lockscreen_bg_default</item>
+        <item>@string/lockscreen_bg_color</item>
+        <item>@string/lockscreen_bg_image</item>
+        <item>@string/lockscreen_bg_see_through</item>
+    </string-array>
+
+    <string-array name="lockscreen_bg_values" translatable="false">
+        <item>default</item>
+        <item>color</item>
+        <item>image</item>
+        <item>see-through</item>
+    </string-array>
+
+    <string-array name="lockscreen_bg_see_through_tint_entries" translatable="false">
+        <item>@string/pref_lockscreen_bg_see_through_tint_dark</item>
+        <item>@string/pref_lockscreen_bg_see_through_tint_light</item>
+        <item>@string/pref_lockscreen_bg_see_through_tint_none</item>
+    </string-array>
+
+    <string-array name="lockscreen_bg_see_through_tint_values" translatable="false">
+        <item>dark</item>
+        <item>light</item>
+        <item>none</item>
+    </string-array>
+
+</resources>
