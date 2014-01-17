@@ -14,5 +14,5 @@ The following modes are supported:
 
 \-\-\-\-
 
-Credits to [David96](http://www.github.com/David86) and [AOSPA](http://www.github.com/AOSPA) for see through mode,
+Credits to [David96](http://www.github.com/David96) and [AOSPA](http://www.github.com/AOSPA) for see through mode,
 and [GravityBox](http://www.github.com/GravityBox) for everything else.
