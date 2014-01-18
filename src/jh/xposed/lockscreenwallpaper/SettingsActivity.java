@@ -144,7 +144,12 @@ public class SettingsActivity extends Activity {
                     mPrefCatLockscreenBg.addPreference(mPrefLockscreenBgImageBlur);
                 } else if (option.equals(LOCKSCREEN_BG_SEE_THROUGH)) {
                     mPrefCatLockscreenBg.addPreference(mPrefLockscreenBgSeeThruTint);
+                    mPrefLockscreenBgSeeThruTint.setSummary(mPrefLockscreenBgSeeThruTint.getEntry());
+                    recycleSeeThroughImage();
                 }
+            } else if (key.equals(PREF_KEY_LOCKSCREEN_BACKGROUND_SEE_THROUGH_TINT)) {
+                mPrefLockscreenBgSeeThruTint.setSummary(mPrefLockscreenBgSeeThruTint.getEntry());
+                recycleSeeThroughImage();
             }
         }
 
