@@ -28,7 +28,6 @@ import android.view.WindowManager;
 public class Utils {
 
     public static final int MAX_BLUR_WIDTH = 900;
-    public static final int MAX_BLUR_HEIGHT = 1600;
 
     // Device types
     private static final int DEVICE_PHONE = 0;
@@ -64,8 +63,11 @@ public class Utils {
     }
 
     public static Bitmap blurBitmap(Bitmap bmp, int radius, Context context) {
-        if (bmp.getWidth() > MAX_BLUR_WIDTH) {
-            bmp = bmp.createScaledBitmap(bmp, MAX_BLUR_WIDTH, MAX_BLUR_HEIGHT, true);
+        int bmpWidth = bmp.getWidth();
+        int bmpHeight = bmp.getHeight();
+        float scale = (float) MAX_BLUR_WIDTH / bmpWidth;
+        if (bmpWidth > MAX_BLUR_WIDTH) {
+            bmp = bmp.createScaledBitmap(bmp, MAX_BLUR_WIDTH, Math.round(bmpHeight * scale), true);
         }
         Bitmap out = Bitmap.createBitmap(bmp);
         RenderScript rs = RenderScript.create(context);

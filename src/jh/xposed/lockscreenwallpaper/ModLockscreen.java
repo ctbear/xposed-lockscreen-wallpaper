@@ -66,7 +66,7 @@ public class ModLockscreen {
                     if (!bgType.equals(SettingsActivity.LOCKSCREEN_BG_DEFAULT)) {
                         Bitmap background;
                         if (bgType.equals(SettingsActivity.LOCKSCREEN_BG_COLOR)) {
-                            int color = mPrefs.getInt(
+                            final int color = mPrefs.getInt(
                                     SettingsActivity.PREF_KEY_LOCKSCREEN_BACKGROUND_COLOR, Color.BLACK);
                             Drawable d = new ColorDrawable(color);
                             int w = d.getIntrinsicWidth() > 0 ? d.getIntrinsicWidth() : 1;
@@ -111,7 +111,9 @@ public class ModLockscreen {
                                 }
                             }
                         }
-                        setLockscreenBitmap(background, context);
+                        if (background != null) {
+                            setLockscreenBitmap(background, context);
+                        }
                     }
                 }
             });
