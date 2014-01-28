@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:robobunny="http://robobunny.com">
 
     <PreferenceCategory
             android:key="pref_cat_lockscreen_background"
@@ -27,19 +29,23 @@
                 android:summary="@string/pref_lockscreen_bg_image_summary"
                 android:order="3" />
 
-        <CheckBoxPreference
-                android:key="pref_lockscreen_bg_image_blur"
-                android:title="@string/pref_lockscreen_bg_image_blur"
-                android:summaryOff="@string/pref_lockscreen_bg_image_blur_summary_off"
-                android:summaryOn="@string/pref_lockscreen_bg_image_blur_summary_on"
-                android:order="4" />
-
         <ListPreference
                 android:key="pref_lockscreen_bg_see_through_tint"
                 android:title="@string/pref_lockscreen_bg_see_through_tint_title"
                 android:entries="@array/lockscreen_bg_see_through_tint_entries"
                 android:entryValues="@array/lockscreen_bg_see_through_tint_values"
                 android:defaultValue="dark"
+                android:order="4" />
+
+        <com.robobunny.SeekBarPreference
+                android:key="pref_lockscreen_blur_amount"
+                android:title="Blur Amount"
+                android:summary="Adjust blur amount"
+                android:defaultValue="70"
+                android:max="100"
+                robobunny:min="0"
+                robobunny:unitsLeft=" "
+                robobunny:unitsRight="%"
                 android:order="5" />
 
     </PreferenceCategory>

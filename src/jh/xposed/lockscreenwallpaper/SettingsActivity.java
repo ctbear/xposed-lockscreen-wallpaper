@@ -28,7 +28,6 @@ import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceCategory;
@@ -39,6 +38,7 @@ import android.util.Log;
 import android.view.Display;
 import android.view.Window;
 import android.widget.Toast;
+import com.robobunny.SeekBarPreference;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 import java.io.File;
@@ -49,8 +49,8 @@ public class SettingsActivity extends Activity {
     public static final String PREF_KEY_LOCKSCREEN_BACKGROUND = "pref_lockscreen_background";
     public static final String PREF_KEY_LOCKSCREEN_BACKGROUND_COLOR = "pref_lockscreen_bg_color";
     public static final String PREF_KEY_LOCKSCREEN_BACKGROUND_IMAGE = "pref_lockscreen_bg_image";
-    public static final String PREF_KEY_LOCKSCREEN_BACKGROUND_IMAGE_BLUR = "pref_lockscreen_bg_image_blur";
     public static final String PREF_KEY_LOCKSCREEN_BACKGROUND_SEE_THROUGH_TINT = "pref_lockscreen_bg_see_through_tint";
+    public static final String PREF_KEY_LOCKSCREEN_BLUR_AMOUNT = "pref_lockscreen_blur_amount";
     public static final String LOCKSCREEN_BG_DEFAULT = "default";
     public static final String LOCKSCREEN_BG_COLOR = "color";
     public static final String LOCKSCREEN_BG_IMAGE = "image";
@@ -73,8 +73,8 @@ public class SettingsActivity extends Activity {
         private ListPreference mPrefLockscreenBg;
         private ColorPickerPreference mPrefLockscreenBgColor;
         private Preference mPrefLockscreenBgImage;
-        private CheckBoxPreference mPrefLockscreenBgImageBlur;
         private ListPreference mPrefLockscreenBgSeeThruTint;
+        private SeekBarPreference mPrefLockscreenBlurAmount;
         private File wallpaperImage;
         private File wallpaperTemporary;
 
@@ -97,10 +97,10 @@ public class SettingsActivity extends Activity {
                     (ColorPickerPreference) findPreference(PREF_KEY_LOCKSCREEN_BACKGROUND_COLOR);
             mPrefLockscreenBgImage =
                     (Preference) findPreference(PREF_KEY_LOCKSCREEN_BACKGROUND_IMAGE);
-            mPrefLockscreenBgImageBlur =
-                    (CheckBoxPreference) findPreference(PREF_KEY_LOCKSCREEN_BACKGROUND_IMAGE_BLUR);
             mPrefLockscreenBgSeeThruTint =
                     (ListPreference) findPreference(PREF_KEY_LOCKSCREEN_BACKGROUND_SEE_THROUGH_TINT);
+            mPrefLockscreenBlurAmount =
+                    (SeekBarPreference) findPreference(PREF_KEY_LOCKSCREEN_BLUR_AMOUNT);
 
             wallpaperImage = new File(getActivity().getFilesDir() + "/lockwallpaper");
             wallpaperTemporary = new File(getActivity().getCacheDir() + "/lockwallpaper.tmp");
@@ -134,17 +134,18 @@ public class SettingsActivity extends Activity {
                 mPrefLockscreenBg.setSummary(mPrefLockscreenBg.getEntry());
                 mPrefCatLockscreenBg.removePreference(mPrefLockscreenBgColor);
                 mPrefCatLockscreenBg.removePreference(mPrefLockscreenBgImage);
-                mPrefCatLockscreenBg.removePreference(mPrefLockscreenBgImageBlur);
                 mPrefCatLockscreenBg.removePreference(mPrefLockscreenBgSeeThruTint);
+                mPrefCatLockscreenBg.removePreference(mPrefLockscreenBlurAmount);
                 String option = mPrefs.getString(PREF_KEY_LOCKSCREEN_BACKGROUND, LOCKSCREEN_BG_DEFAULT);
                 if (option.equals(LOCKSCREEN_BG_COLOR)) {
                     mPrefCatLockscreenBg.addPreference(mPrefLockscreenBgColor);
                 } else if (option.equals(LOCKSCREEN_BG_IMAGE)) {
                     mPrefCatLockscreenBg.addPreference(mPrefLockscreenBgImage);
-                    mPrefCatLockscreenBg.addPreference(mPrefLockscreenBgImageBlur);
+                    mPrefCatLockscreenBg.addPreference(mPrefLockscreenBlurAmount);
                 } else if (option.equals(LOCKSCREEN_BG_SEE_THROUGH)) {
                     mPrefCatLockscreenBg.addPreference(mPrefLockscreenBgSeeThruTint);
                     mPrefLockscreenBgSeeThruTint.setSummary(mPrefLockscreenBgSeeThruTint.getEntry());
+                    mPrefCatLockscreenBg.addPreference(mPrefLockscreenBlurAmount);
                     recycleSeeThroughImage();
                 }
             } else if (key.equals(PREF_KEY_LOCKSCREEN_BACKGROUND_SEE_THROUGH_TINT)) {
