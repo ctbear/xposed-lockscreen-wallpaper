@@ -19,9 +19,6 @@
     <string name="pref_lockscreen_bg_color_summary">Allows to set custom background color for lockscreen</string>
     <string name="pref_lockscreen_bg_image_title">Set custom image</string>
     <string name="pref_lockscreen_bg_image_summary">Allows to set custom background image for lockscreen</string>
-    <string name="pref_lockscreen_bg_image_blur">Blur custom image</string>
-    <string name="pref_lockscreen_bg_image_blur_summary_off">Custom image will not be blurred</string>
-    <string name="pref_lockscreen_bg_image_blur_summary_on">Custom image will be blurred</string>
     <string name="pref_lockscreen_bg_see_through_tint_title">Tinting</string>
     <string name="pref_lockscreen_bg_see_through_tint_dark">Dark</string>
     <string name="pref_lockscreen_bg_see_through_tint_light">Light</string>

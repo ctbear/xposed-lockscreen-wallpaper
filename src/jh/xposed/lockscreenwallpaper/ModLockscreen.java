@@ -76,24 +76,20 @@ public class ModLockscreen {
                             d.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
                             d.draw(canvas);
                         } else {
-                            boolean blurImage = false;
                             String wallpaperFile = "";
                             if (bgType.equals(SettingsActivity.LOCKSCREEN_BG_IMAGE)) {
                                 wallpaperFile = mContext.getFilesDir() + "/lockwallpaper";
-                                blurImage = mPrefs.getBoolean(
-                                        SettingsActivity.PREF_KEY_LOCKSCREEN_BACKGROUND_IMAGE_BLUR, false);
                             } else if (bgType.equals(SettingsActivity.LOCKSCREEN_BG_SEE_THROUGH)) {
                                 wallpaperFile = mContext.getFilesDir() + "/seethroughimage";
-                                blurImage = true;
                             }
 
                             background = BitmapFactory.decodeFile(wallpaperFile);
                             if (DEBUG) log("Wallpaper file null: " + (background == null));
                             if (background != null) {
-                                if (blurImage) {
-                                    background = Utils.blurBitmap(background,
-                                            background.getWidth() < Utils.MAX_BLUR_WIDTH ? 14 : 18, mContext);
-                                }
+                                int blurAmount = mPrefs.getInt(
+                                        SettingsActivity.PREF_KEY_LOCKSCREEN_BLUR_AMOUNT, 100) / 4;
+                                blurAmount = blurAmount == 0 ? 1 : blurAmount;
+                                background = Utils.blurBitmap(background, blurAmount, mContext);
                                 if (bgType.equals(SettingsActivity.LOCKSCREEN_BG_SEE_THROUGH)) {
                                     final String tint = mPrefs.getString(
                                             SettingsActivity.PREF_KEY_LOCKSCREEN_BACKGROUND_SEE_THROUGH_TINT,
