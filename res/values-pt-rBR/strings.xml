@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Xposed Lockscreen Wallpaper</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Seletor de cores</string>
+    <string name="press_color_to_apply">Clique na cor para selecionar</string>
+
+    <!--  Lockscreen tweaks -->
+    <string name="pref_cat_lockscreen_title">Papel de parede da tela bloqueada</string>
+    <string name="pref_cat_lockscreen_summary">Customize o papel de parede de\'s sua tela bloqueada</string>
+    <string name="pref_cat_lockscreen_background_title">Papel de parede da tela bloqueada</string>
+    <string name="pref_lockscreen_background_title">Estilo do papel de parede</string>
+    <string name="lockscreen_bg_default">Padrão</string>
+    <string name="lockscreen_bg_color">Cor única</string>
+    <string name="lockscreen_bg_image">Imagem Customizada</string>
+    <string name="lockscreen_bg_see_through">Ver através do papel de parede</string>
+    <string name="pref_lockscreen_bg_color_title">Selecionar a cor</string>
+    <string name="pref_lockscreen_bg_color_summary">Permitir selecionar uma cor customizada como papel de parede</string>
+    <string name="pref_lockscreen_bg_image_title">Setar imagem customizida</string>
+    <string name="pref_lockscreen_bg_image_summary">Permitir selecionar uma imagem customizada como papel de parede</string>
+    <string name="pref_lockscreen_bg_image_blur">Borrar o papel de parede</string>
+    <string name="pref_lockscreen_bg_image_blur_summary_off">A imagem não será borrada</string>
+    <string name="pref_lockscreen_bg_image_blur_summary_on">A imagem será borrada</string>
+    <string name="pref_lockscreen_bg_see_through_tint_title">Tom</string>
+    <string name="pref_lockscreen_bg_see_through_tint_dark">Escuro</string>
+    <string name="pref_lockscreen_bg_see_through_tint_light">Claro</string>
+    <string name="pref_lockscreen_bg_see_through_tint_none">Nenhum</string>
+    <string name="lockscreen_background_result_successful">O papel de parede foi trocado com sucesso!</string>
+    <string name="lockscreen_background_result_not_successful">Houve uma falha na troca do papel de parede!</string>
+</resources>
