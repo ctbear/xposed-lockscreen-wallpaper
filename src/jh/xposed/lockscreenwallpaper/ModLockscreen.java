@@ -25,6 +25,8 @@ import android.graphics.Matrix;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.Surface;
+import android.view.WindowManager;
 import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XSharedPreferences;
 import de.robv.android.xposed.XposedBridge;
@@ -120,6 +122,26 @@ public class ModLockscreen {
     }
 
     private static void setLockscreenBitmap(Bitmap bmp, Context context) {
+        WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        final int rotation = windowManager.getDefaultDisplay().getRotation();
+        if (DEBUG) log("Rotation: " + rotation);
+        if (rotation != Surface.ROTATION_0) {
+            int toRotate = 0;
+            switch(rotation) {
+                case Surface.ROTATION_90:
+                    toRotate = -90;
+                    break;
+                case Surface.ROTATION_180:
+                    toRotate = -180;
+                    break;
+                case Surface.ROTATION_270:
+                    toRotate = 90;
+                    break;
+            }
+            Matrix matrix = new Matrix();
+            matrix.postRotate(toRotate);
+            bmp = Bitmap.createBitmap(bmp, 0, 0, bmp.getWidth(), bmp.getHeight(), matrix, true);
+        }
         final Class<?> keyguardUpdateMonitorClass = XposedHelpers.findClass("com.android.keyguard.KeyguardUpdateMonitor",
                 context.getClassLoader());
         Object keyguardUpdateMonitor = XposedHelpers.callStaticMethod(keyguardUpdateMonitorClass, "getInstance", context);
