@@ -17,7 +17,7 @@
     <string name="lockscreen_bg_see_through">Ver através do papel de parede</string>
     <string name="pref_lockscreen_bg_color_title">Selecionar a cor</string>
     <string name="pref_lockscreen_bg_color_summary">Permitir selecionar uma cor customizada como papel de parede</string>
-    <string name="pref_lockscreen_bg_image_title">Setar imagem customizida</string>
+    <string name="pref_lockscreen_bg_image_title">Setar imagem customizada</string>
     <string name="pref_lockscreen_bg_image_summary">Permitir selecionar uma imagem customizada como papel de parede</string>
     <string name="pref_lockscreen_bg_image_blur">Borrar o papel de parede</string>
     <string name="pref_lockscreen_bg_image_blur_summary_off">A imagem não será borrada</string>
