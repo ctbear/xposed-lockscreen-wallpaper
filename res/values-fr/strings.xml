@@ -7,22 +7,22 @@
     <string name="press_color_to_apply">Appuyer sur la couleur pour l\'appliquer</string>
 
     <!--  Lockscreen tweaks -->
-    <string name="pref_cat_lockscreen_title">Fond du lockscreen</string>
-    <string name="pref_cat_lockscreen_summary">Personnalisez l\'arrière-plan de votre lockscreen</string>
-    <string name="pref_cat_lockscreen_background_title">Fond du lockscreen</string>
-    <string name="pref_lockscreen_background_title">Style de l\arrière-plan</string>
-    <string name="lockscreen_bg_default">Fond d\'écran par défault</string>
+    <string name="pref_cat_lockscreen_title">Fond d\'écran de verrouillage</string>
+    <string name="pref_cat_lockscreen_summary">Personnaliser le fond de votre écran de verrouillage</string>
+    <string name="pref_cat_lockscreen_background_title">Fond d\'écran de verrouillage</string>
+    <string name="pref_lockscreen_background_title">Style de fond</string>
+    <string name="lockscreen_bg_default">Fond d\'écran par défaut</string>
     <string name="lockscreen_bg_color">Couleur de remplissage</string>
     <string name="lockscreen_bg_image">Image personnalisée</string>
     <string name="lockscreen_bg_see_through">Voir à travers</string>
-    <string name="pref_lockscreen_bg_color_title">Définir la couleur personnalisée</string>
-    <string name="pref_lockscreen_bg_color_summary">Permet de définir la couleur de l\'arrière-plan personnalisé pour le lockscreen</string>
-    <string name="pref_lockscreen_bg_image_title">Choisir l\'image personnalisée</string>
-    <string name="pref_lockscreen_bg_image_summary">Permet de choisir l\'image personnalisée pour le définir sur le lockscreen</string>
+    <string name="pref_lockscreen_bg_color_title">Définir une couleur personnalisée</string>
+    <string name="pref_lockscreen_bg_color_summary">Permet de définir une couleur de fond pour l\'écran de verrouillage</string>
+    <string name="pref_lockscreen_bg_image_title">Définir une image personnalisée</string>
+    <string name="pref_lockscreen_bg_image_summary">Permet de définir une image de fond pour l\'écran de verrouillage</string>
     <string name="pref_lockscreen_bg_see_through_tint_title">Coloration</string>
     <string name="pref_lockscreen_bg_see_through_tint_dark">Sombre</string>
     <string name="pref_lockscreen_bg_see_through_tint_light">Claire</string>
-    <string name="pref_lockscreen_bg_see_through_tint_none">Aucun</string>
-    <string name="lockscreen_background_result_successful">Le fond est changé avec succès</string>
-    <string name="lockscreen_background_result_not_successful">Le fond n\'est pas changé</string>
+    <string name="pref_lockscreen_bg_see_through_tint_none">Aucune</string>
+    <string name="lockscreen_background_result_successful">Fond modifié</string>
+    <string name="lockscreen_background_result_not_successful">Fond non modifié</string>
 </resources>
