@@ -23,6 +23,8 @@
     <string name="pref_lockscreen_bg_see_through_tint_dark">Dark</string>
     <string name="pref_lockscreen_bg_see_through_tint_light">Light</string>
     <string name="pref_lockscreen_bg_see_through_tint_none">None</string>
+    <string name="pref_lockscreen_bg_blur_amount_title">Blur Amount</string>
+    <string name="pref_lockscreen_bg_blur_amount_summary">Adjust Blur Amount</string>
     <string name="lockscreen_background_result_successful">Background changed</string>
     <string name="lockscreen_background_result_not_successful">Background not changed</string>
 </resources>

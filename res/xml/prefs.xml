@@ -39,8 +39,8 @@
 
         <com.robobunny.SeekBarPreference
                 android:key="pref_lockscreen_blur_amount"
-                android:title="Blur Amount"
-                android:summary="Adjust blur amount"
+                android:title="@string/pref_lockscreen_bg_blur_amount_title"
+                android:summary="@string/pref_lockscreen_bg_blur_amount_summary"
                 android:defaultValue="70"
                 android:max="100"
                 robobunny:min="0"

@@ -23,6 +23,8 @@
     <string name="pref_lockscreen_bg_see_through_tint_dark">Sombre</string>
     <string name="pref_lockscreen_bg_see_through_tint_light">Claire</string>
     <string name="pref_lockscreen_bg_see_through_tint_none">Aucune</string>
+    <string name="pref_lockscreen_bg_blur_amount_title">Niveau de flou</string>
+    <string name="pref_lockscreen_bg_blur_amount_summary">Ajuster le niveau de flou</string>
     <string name="lockscreen_background_result_successful">Fond modifié</string>
     <string name="lockscreen_background_result_not_successful">Fond non modifié</string>
 </resources>
