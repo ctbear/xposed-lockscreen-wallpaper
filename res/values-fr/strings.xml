@@ -4,7 +4,6 @@
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
-    <string name="press_color_to_apply">Appuyer sur la couleur pour l\'appliquer</string>
 
     <!--  Lockscreen tweaks -->
     <string name="pref_cat_lockscreen_title">Fond d\'écran de verrouillage</string>
