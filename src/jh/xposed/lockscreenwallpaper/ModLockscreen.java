@@ -109,7 +109,8 @@ public class ModLockscreen {
                                 }
                             }
                         }
-                        if (background != null) {
+                        Object mKeyguardHost = XposedHelpers.getObjectField(param.thisObject, "mKeyguardHost");
+                        if (background != null && isKeyguardHostDimensionNonZero(mKeyguardHost)) {
                             setLockscreenBitmap(background, context);
                         }
                     }
@@ -146,6 +147,16 @@ public class ModLockscreen {
                 context.getClassLoader());
         Object keyguardUpdateMonitor = XposedHelpers.callStaticMethod(keyguardUpdateMonitorClass, "getInstance", context);
         XposedHelpers.callMethod(keyguardUpdateMonitor, "dispatchSetBackground", bmp);
+    }
+
+    // This is a hack around CM based ROMs
+    // where the ViewManagerHost has a zero width or height at boot
+    private static boolean isKeyguardHostDimensionNonZero(Object keyguardHost) {
+        if (keyguardHost == null) return false;
+
+        int width = (Integer) XposedHelpers.callMethod(keyguardHost, "getWidth");
+        int height = (Integer) XposedHelpers.callMethod(keyguardHost, "getHeight");
+        return width > 0 && height > 0;
     }
 
 }
