@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Xposed Lockscreen Wallpaper</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Izbiralec barve</string>
+    <string name="press_color_to_apply">Izberi barvo</string>
+
+    <!--  Lockscreen tweaks -->
+    <string name="pref_cat_lockscreen_title">Ozadje zaklenjenega zaslona</string>
+    <string name="pref_cat_lockscreen_summary">Spremeni ozadje zaklenjenega zaslona</string>
+    <string name="pref_cat_lockscreen_background_title">Ozadje zaklenjenega zaslona</string>
+    <string name="pref_lockscreen_background_title">Stil ozadja</string>
+    <string name="lockscreen_bg_default">Privzeta slika</string>
+    <string name="lockscreen_bg_color">Barvno polnilo</string>
+    <string name="lockscreen_bg_image">Slika po meri</string>
+    <string name="lockscreen_bg_see_through">Prosojnost</string>
+    <string name="pref_lockscreen_bg_color_title">Izberi barvo po meri</string>
+    <string name="pref_lockscreen_bg_color_summary">Dovoli nastavljanje barve za ozadje zaklenjenega zaslona</string>
+    <string name="pref_lockscreen_bg_image_title">Izberi sliko po meri</string>
+    <string name="pref_lockscreen_bg_image_summary">Dovoli nastavljanje slike za ozadje zaklenjenega zaslona</string>
+    <string name="pref_lockscreen_bg_see_through_tint_title">Temnenje</string>
+    <string name="pref_lockscreen_bg_see_through_tint_dark">Temno</string>
+    <string name="pref_lockscreen_bg_see_through_tint_light">Svetlo</string>
+    <string name="pref_lockscreen_bg_see_through_tint_none">Brez</string>
+    <string name="pref_lockscreen_bg_blur_amount_title">Količina zamegljenosti</string>
+    <string name="pref_lockscreen_bg_blur_amount_summary">Spremeni količino zamegljenosti</string>
+    <string name="lockscreen_background_result_successful">Ozadje spremenjeno</string>
+    <string name="lockscreen_background_result_not_successful">Ozadje ni bilo spremenjeno</string>
+</resources>
