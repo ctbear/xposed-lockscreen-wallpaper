@@ -50,9 +50,7 @@ public class ModLockscreen {
         try {
             mPrefs = prefs;
             final Class<?> kgViewManagerClass = XposedHelpers.findClass(CLASS_KGVIEW_MANAGER, classLoader);
-
-            XposedHelpers.findAndHookMethod(kgViewManagerClass, "maybeCreateKeyguardLocked",
-                    boolean.class, boolean.class, Bundle.class, new XC_MethodHook() {
+            final XC_MethodHook methodHook = new XC_MethodHook() {
                 @Override
                 protected void afterHookedMethod(final MethodHookParam param) throws Throwable {
                     mPrefs.reload();
@@ -115,7 +113,13 @@ public class ModLockscreen {
                         }
                     }
                 }
-            });
+            };
+
+            XposedHelpers.findAndHookMethod(kgViewManagerClass, "maybeCreateKeyguardLocked",
+                    boolean.class, boolean.class, Bundle.class, methodHook);
+            // SlimROM has a different method signature
+            XposedHelpers.findAndHookMethod(kgViewManagerClass, "maybeCreateKeyguardLocked",
+                    int.class, boolean.class, Bundle.class, methodHook);
 
         } catch (Throwable t) {
             XposedBridge.log(t);
