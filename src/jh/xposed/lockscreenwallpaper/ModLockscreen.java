@@ -114,16 +114,21 @@ public class ModLockscreen {
                     }
                 }
             };
-
-            XposedHelpers.findAndHookMethod(kgViewManagerClass, "maybeCreateKeyguardLocked",
-                    boolean.class, boolean.class, Bundle.class, methodHook);
-            // SlimROM has a different method signature
-            XposedHelpers.findAndHookMethod(kgViewManagerClass, "maybeCreateKeyguardLocked",
-                    int.class, boolean.class, Bundle.class, methodHook);
-
+            
         } catch (Throwable t) {
             XposedBridge.log(t);
         }
+
+        try {
+            XposedHelpers.findAndHookMethod(kgViewManagerClass, "maybeCreateKeyguardLocked",
+                    boolean.class, boolean.class, Bundle.class, methodHook);
+        } catch (Throwable t) {}
+        
+        try {
+            // SlimROM has a different method signature
+            XposedHelpers.findAndHookMethod(kgViewManagerClass, "maybeCreateKeyguardLocked",
+                    int.class, boolean.class, Bundle.class, methodHook);
+        } catch (Throwable t) {}
     }
 
     private static void setLockscreenBitmap(Bitmap bmp, Context context) {
