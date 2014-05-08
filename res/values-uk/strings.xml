@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Xposed Lockscreen Wallpaper</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Вибір кольору</string>
+    <string name="press_color_to_apply">Натисніть на колір для застосування</string>
+
+    <!--  Lockscreen tweaks -->
+    <string name="pref_cat_lockscreen_title">Фон экрану блокування</string>
+    <string name="pref_cat_lockscreen_summary">Налаштування фону екрану блокування</string>
+    <string name="pref_cat_lockscreen_background_title">Фон экрану блокування</string>
+    <string name="pref_lockscreen_background_title">Стиль фону</string>
+    <string name="lockscreen_bg_default">Стандартні шпалери</string>
+    <string name="lockscreen_bg_color">Заповнення кольором</string>
+    <string name="lockscreen_bg_image">Користувацьке зображення</string>
+    <string name="lockscreen_bg_see_through">Прозорий</string>
+    <string name="pref_lockscreen_bg_color_title">Задати колір</string>
+    <string name="pref_lockscreen_bg_color_summary">Дозволяє задати колір фону для екрану блокування</string>
+    <string name="pref_lockscreen_bg_image_title">Задати зображення</string>
+    <string name="pref_lockscreen_bg_image_summary">Дозволяє встановити користувацьке зображення для екрану блокування</string>
+    <string name="pref_lockscreen_bg_see_through_tint_title">Затемнення</string>
+    <string name="pref_lockscreen_bg_see_through_tint_dark">Темне</string>
+    <string name="pref_lockscreen_bg_see_through_tint_light">Світле</string>
+    <string name="pref_lockscreen_bg_see_through_tint_none">Відсутнє</string>
+    <string name="pref_lockscreen_bg_blur_amount_title">Ефект розмиття</string>
+    <string name="pref_lockscreen_bg_blur_amount_summary">Встановлення інтенсивності розмиття</string>
+    <string name="lockscreen_background_result_successful">Фон змінено</string>
+    <string name="lockscreen_background_result_not_successful">Фон не змінено</string>
+</resources>
